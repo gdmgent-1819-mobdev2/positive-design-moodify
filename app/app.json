@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Moodify",
+    "name": "app",
     "slug": "moodify",
     "privacy": "public",
     "sdkVersion": "32.0.0",
@@ -24,6 +24,16 @@
     ],
     "ios": {
       "supportsTablet": true
+    },
+    "isDetached": true,
+    "detach": {
+      "androidExpoViewUrl": "https://s3.amazonaws.com/exp-exponent-view-code/android-v2.10.6-sdk32.0.0-83a07c97-312f-4bbf-8b19-5c609bc3c386.tar.gz"
+    },
+    "scheme": "exp58557e7e1c9a4afbaaaa5a2d39d04306",
+    "android": {
+      "package": "com.moodify",
+      "publishBundlePath": "android\\app\\src\\main\\assets\\shell-app.bundle",
+      "publishManifestPath": "android\\app\\src\\main\\assets\\shell-app-manifest.json"
     }
   }
 }
