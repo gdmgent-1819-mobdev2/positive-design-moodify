@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Moodify",
+    "name": "app",
     "slug": "moodify",
     "privacy": "public",
     "sdkVersion": "32.0.0",
