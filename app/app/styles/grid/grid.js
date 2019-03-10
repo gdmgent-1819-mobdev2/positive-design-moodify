@@ -22,8 +22,9 @@ const grid = StyleSheet.create({
     justifyContent: 'center'
   },
   containerDashboardScreen: {
+    paddingTop: 50,
     flex: 1,
-    backgroundColor: '#129EEF',
+    backgroundColor: '#F5F5F5',
     flexDirection: 'column',
     alignItems: 'center'
   },

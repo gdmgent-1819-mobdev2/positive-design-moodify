@@ -2,8 +2,9 @@ import { StyleSheet } from 'react-native'
 
 const smiley = StyleSheet.create({
   container: {
-    width: 50,
-    height: 50,
+    width: 55,
+    height: 55,
+    margin: 4,
   }
 })
 

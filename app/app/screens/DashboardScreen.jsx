@@ -1,13 +1,14 @@
 //React dependencies
 import React, { Component } from 'react'
-import { View } from 'react-native'
+import { View, Text } from 'react-native'
 //import { Svg, Defs, LinearGradient, Stop, Ellipse } from 'expo';
 
 //Components
 import { AddMoodButton } from '../components'
+import { DashboardCard } from '../components'
 
 //Styles
-import { grid, addButton } from '../styles'
+import { grid, addButton, text } from '../styles'
 
 
 export class DashBoardScreen extends Component{
@@ -26,6 +27,9 @@ export class DashBoardScreen extends Component{
       //   <Ellipse cx="150" cy="75" rx="85" ry="55" fill="url(#grad)" />
       // </Svg>
       <View style={grid.containerDashboardScreen}>
+        <Text style={text.tabs}>Dashboard</Text>
+        <DashboardCard cardTitle="Tip of the day" cardText="Go swimming! There's a public pool 2km away." />
+        <DashboardCard cardTitle="History"/>
         <View style={addButton.bottom}>
           <AddMoodButton />
         </View>
