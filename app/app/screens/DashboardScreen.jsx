@@ -1,6 +1,6 @@
 //React dependencies
 import React, { Component } from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, ImageBackground } from 'react-native'
 //import { Svg, Defs, LinearGradient, Stop, Ellipse } from 'expo';
 
 //Components
@@ -26,14 +26,14 @@ export class DashBoardScreen extends Component{
       //   </Defs>
       //   <Ellipse cx="150" cy="75" rx="85" ry="55" fill="url(#grad)" />
       // </Svg>
-      <View style={grid.containerDashboardScreen}>
+      <ImageBackground style={grid.containerDashboardScreen} source={require('../assets/images//dashboardBG.png')}>
         <Text style={text.tabs}>Dashboard</Text>
         <DashboardCard cardTitle="Tip of the day" cardText="Go swimming! There's a public pool 2km away." />
         <DashboardCard cardTitle="History"/>
         <View style={addButton.bottom}>
           <AddMoodButton />
         </View>
-      </View>
+      </ImageBackground>
     )
   }
 }
