@@ -13,6 +13,12 @@ const dashboard = StyleSheet.create({
     shadowRadius: 3,
     elevation: 1,
   },
+  cardContainer: {
+    paddingBottom: 40,
+    backgroundColor: 'transparent',
+    flexDirection: 'column',
+    alignItems: 'center'
+  },
 })
 
 export default dashboard

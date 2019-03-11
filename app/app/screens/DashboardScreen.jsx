@@ -1,6 +1,6 @@
 //React dependencies
 import React, { Component } from 'react'
-import { View, Text, ImageBackground } from 'react-native'
+import { View, Text, ImageBackground, ScrollView } from 'react-native'
 //import { Svg, Defs, LinearGradient, Stop, Ellipse } from 'expo';
 
 //Components
@@ -8,7 +8,7 @@ import { AddMoodButton } from '../components'
 import { DashboardCard } from '../components'
 
 //Styles
-import { grid, addButton, text } from '../styles'
+import { grid, addButton, text, dashboard } from '../styles'
 
 
 export class DashBoardScreen extends Component{
@@ -27,9 +27,11 @@ export class DashBoardScreen extends Component{
       //   <Ellipse cx="150" cy="75" rx="85" ry="55" fill="url(#grad)" />
       // </Svg>
       <ImageBackground style={grid.containerDashboardScreen} source={require('../assets/images//dashboardBG.png')}>
-        <Text style={text.tabs}>Dashboard</Text>
-        <DashboardCard cardTitle="Tip of the day" cardText="Go swimming! There's a public pool 2km away." />
-        <DashboardCard cardTitle="History"/>
+        <ScrollView contentContainerStyle={dashboard.cardContainer} showsVerticalScrollIndicator={false}>
+          <Text style={text.tabs}>Dashboard</Text>
+          <DashboardCard cardTitle="Tip of the day" cardText="Go swimming! There's a public pool 2km away." />
+          <DashboardCard cardTitle="History"/>
+        </ScrollView>
         <View style={addButton.bottom}>
           <AddMoodButton />
         </View>

@@ -28,7 +28,6 @@ const grid = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'center'
   },
-
   smiley: {
     flexDirection: 'row'
   }

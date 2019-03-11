@@ -13,7 +13,7 @@ const text = StyleSheet.create({
     alignSelf: 'flex-start',
     color: '#2B2B2B',
     fontFamily: 'europa-bold',
-    marginLeft: 40,
+    marginLeft: 20,
     marginBottom: 18,
     marginTop: 10,
   },
