@@ -12,6 +12,23 @@ import { grid, addButton, text, dashboard } from '../styles'
 
 
 export class DashBoardScreen extends Component{
+  // trying to work with an api... semothing with setstate
+  /*constructor() {
+    fetch('http://quotes.rest/qod.json')
+      .then((response) => response.json())
+      .then((responseJson) => {
+        let quote = {
+          "text": responseJson.contents.quotes[0].quote,
+          "author": responseJson.contents.quotes[0].author,
+        }
+        console.log(quote)
+         
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }*/
+
   render() {
     return (
       // <Svg
@@ -29,7 +46,7 @@ export class DashBoardScreen extends Component{
       <ImageBackground style={grid.containerDashboardScreen} source={require('../assets/images//dashboardBG.png')}>
         <ScrollView contentContainerStyle={dashboard.cardContainer} showsVerticalScrollIndicator={false}>
           <Text style={text.tabs}>Dashboard</Text>
-          <DashboardCard cardTitle="Tip of the day" cardText="Go swimming! There's a public pool 2km away." />
+          <DashboardCard cardTitle="Tip of the day" cardText="Go swimming! There's a swimming pool 3km away."/>
           <DashboardCard cardTitle="History"/>
         </ScrollView>
         <View style={addButton.bottom}>
