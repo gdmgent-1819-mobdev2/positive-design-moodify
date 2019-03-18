@@ -18,7 +18,7 @@ const text = StyleSheet.create({
     marginTop: 10,
   },
   cardTitle: {
-    fontSize: 18,
+    fontSize: 20,
     alignSelf: 'flex-start',
     color: '#4F4F4F',
     fontFamily: 'europa-bold',
@@ -43,7 +43,19 @@ const text = StyleSheet.create({
     color: '#616161',
     fontFamily: 'europa-regular',
     marginTop: 4,
-  }
+  },
+  weekdayLetter: {
+    fontSize: 19,
+    color: '#616161',
+    fontFamily: 'europa-regular',
+    margin: 14,
+  },
+  weekdayLetterHighlighted: {
+    fontSize: 19,
+    color: '#FF4140',
+    fontFamily: 'europa-regular',
+    margin: 14,
+  },
 })
 
 export default text

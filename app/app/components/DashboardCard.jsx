@@ -1,8 +1,8 @@
 //React dependencies
 import React, { Component } from 'react'
-import { View, Text } from 'react-native'
+import { View } from 'react-native'
 //Styles
-import { dashboard, text } from '../styles'
+import { dashboard } from '../styles'
 
 export class DashboardCard extends Component {
   render(){

@@ -6,6 +6,7 @@ import { View, Text, ImageBackground, ScrollView } from 'react-native'
 //Components
 import { AddMoodButton } from '../components'
 import { DashboardCard } from '../components'
+import { DashboardHistory } from '../components'
 
 //Styles
 import { grid, addButton, text, dashboard } from '../styles'
@@ -45,7 +46,7 @@ export class DashBoardScreen extends Component{
       // </Svg>
       <ImageBackground style={grid.containerDashboardScreen} source={require('../assets/images//dashboardBG.png')}>
         <ScrollView contentContainerStyle={dashboard.cardContainer} showsVerticalScrollIndicator={false}>
-        
+
           <Text style={text.tabs}>Dashboard</Text>
 
           <DashboardCard>
@@ -55,6 +56,7 @@ export class DashBoardScreen extends Component{
 
           <DashboardCard>
             <Text style={text.cardTitle}> History </Text>
+            <DashboardHistory/>
           </DashboardCard>
 
         </ScrollView>

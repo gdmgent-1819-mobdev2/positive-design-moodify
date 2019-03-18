@@ -2,6 +2,8 @@ import { StyleSheet } from 'react-native'
 
 const dashboard = StyleSheet.create({
   card: {
+    flex: 0.8,
+    alignItems: "center",
     width: 360,
     padding: 10,
     backgroundColor: '#FFF',
