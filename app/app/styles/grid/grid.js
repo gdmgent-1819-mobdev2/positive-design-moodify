@@ -9,8 +9,9 @@ const grid = StyleSheet.create({
     justifyContent: 'center',
   },
   container: {
+    paddingTop: 50,
     flex: 1,
-    backgroundColor: '#FFF',
+    backgroundColor: '#F5F5F5',
     flexDirection: 'column',
     alignItems: 'center'
   },

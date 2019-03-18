@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native'
 const dashboard = StyleSheet.create({
   card: {
     width: 360,
-    height: 200,
+    padding: 10,
     backgroundColor: '#FFF',
     borderRadius:15,
     marginBottom:20,

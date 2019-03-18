@@ -5,6 +5,7 @@ import addButton from './components/addButton'
 import smiley from './components/smiley'
 import text from './components/text'
 import dashboard from './components/dashboard'
+import profile from './components/profile'
 
 export {
   grid,
@@ -14,4 +15,5 @@ export {
   smiley, 
   text,
   dashboard,
+  profile,
 }

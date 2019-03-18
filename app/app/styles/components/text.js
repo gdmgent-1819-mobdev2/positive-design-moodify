@@ -22,18 +22,28 @@ const text = StyleSheet.create({
     alignSelf: 'flex-start',
     color: '#4F4F4F',
     fontFamily: 'europa-bold',
-    marginLeft: 10,
     marginBottom: 18,
-    marginTop: 16,
   },
   cardText: {
     fontSize: 16,
     alignSelf: 'flex-start',
     color: '#616161',
     fontFamily: 'europa-regular',
-    marginLeft: 10,
     marginRight: 18,
+    marginBottom:20,
   },
+  option: {
+    fontSize: 16,
+    color: '#616161',
+    fontFamily: 'europa-regular',
+    marginRight: 4,
+  },
+  profileName: {
+    fontSize: 20,
+    color: '#616161',
+    fontFamily: 'europa-regular',
+    marginTop: 4,
+  }
 })
 
 export default text

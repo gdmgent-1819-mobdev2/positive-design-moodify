@@ -45,9 +45,18 @@ export class DashBoardScreen extends Component{
       // </Svg>
       <ImageBackground style={grid.containerDashboardScreen} source={require('../assets/images//dashboardBG.png')}>
         <ScrollView contentContainerStyle={dashboard.cardContainer} showsVerticalScrollIndicator={false}>
+        
           <Text style={text.tabs}>Dashboard</Text>
-          <DashboardCard cardTitle="Tip of the day" cardText="Go swimming! There's a swimming pool 3km away."/>
-          <DashboardCard cardTitle="History"/>
+
+          <DashboardCard>
+            <Text style={text.cardTitle}> Tip of the day </Text>
+            <Text style={text.cardText}> Go swimming! There's a swimming pool 3km away. </Text>
+          </DashboardCard>
+
+          <DashboardCard>
+            <Text style={text.cardTitle}> History </Text>
+          </DashboardCard>
+
         </ScrollView>
         <View style={addButton.bottom}>
           <AddMoodButton />
