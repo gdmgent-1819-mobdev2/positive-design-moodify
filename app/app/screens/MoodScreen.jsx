@@ -67,7 +67,7 @@ export class MoodScreen extends Component{
               activeOpacity={0.5}
               style={smiley.container} 
 
-            source={require('../assets/images/smileys/045-shocked-3.png')}/>
+              source={require('../assets/images/smileys/045-shocked-3.png')}/>
             </TouchableHighlight  >
 
             <TouchableHighlight underlayColor='none'

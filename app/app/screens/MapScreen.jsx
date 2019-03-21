@@ -4,17 +4,12 @@ import { StyleSheet, Text, View, Animated, Image, Dimensions } from "react-nativ
 
 import { MapView } from 'expo'
 
-const Images = [
-  { uri: "https://i.imgur.com/sNam9iJ.jpg" },
-  { uri: "https://i.imgur.com/N7rlQYt.jpg" },
-  { uri: "https://i.imgur.com/UDrH0wm.jpg" },
-  { uri: "https://i.imgur.com/Ka8kNST.jpg" }
-]
+
 
 const { width, height } = Dimensions.get("window");
 
 const CARD_HEIGHT = height / 4;
-const CARD_WIDTH = CARD_HEIGHT - 50;
+const CARD_WIDTH = width - 20;
 
 export class MapScreen extends Component {
   state = {
@@ -24,36 +19,36 @@ export class MapScreen extends Component {
           latitude: 45.524548,
           longitude: -122.6749817,
         },
-        title: "Best Place",
+        title: "156171",
         description: "This is the best place in Portland",
-        image: Images[0],
+        image: require('../assets/images/smileys/045-shocked-3.png'),
       },
       {
         coordinate: {
           latitude: 45.524698,
           longitude: -122.6655507,
         },
-        title: "Second Best Place",
+        title: "7157161",
         description: "This is the second best place in Portland",
-        image: Images[1],
+        image: require('../assets/images/smileys/003-angry-5.png'),
       },
       {
         coordinate: {
           latitude: 45.5230786,
           longitude: -122.6701034,
         },
-        title: "Third Best Place",
+        title: "98798",
         description: "This is the third best place in Portland",
-        image: Images[2],
+        image: require('../assets/images/smileys/010-nerd-10.png'),
       },
       {
         coordinate: {
           latitude: 45.521016,
           longitude: -122.6561917,
         },
-        title: "Fourth Best Place",
+        title: "87876",
         description: "This is the fourth best place in Portland",
-        image: Images[3],
+        image: require('../assets/images/smileys/015-sad-7.png'),
       },
     ],
     region: {
@@ -140,7 +135,11 @@ export class MapScreen extends Component {
               <MapView.Marker key={index} coordinate={marker.coordinate}>
                 <Animated.View style={[styles.markerWrap, opacityStyle]}>
                   <Animated.View style={[styles.ring, scaleStyle]} />
-                  <View style={styles.marker} />
+                  <Image source={require('../assets/images/smileys/045-shocked-3.png')} style={{height: 50, width:50, padding: 10, }} />
+
+                  <View style={styles.marker} >
+
+                 </View>
                 </Animated.View>
               </MapView.Marker>
             );
@@ -171,14 +170,9 @@ export class MapScreen extends Component {
               <Image
                 source={marker.image}
                 style={styles.cardImage}
-                resizeMode="cover"
+                resizeMode="contain"
               />
-              <View style={styles.textContent}>
-                <Text numberOfLines={1} style={styles.cardtitle}>{marker.title}</Text>
-                <Text numberOfLines={1} style={styles.cardDescription}>
-                  {marker.description}
-                </Text>
-              </View>
+              <Text numberOfLines={1} style={styles.cardtitle}>{marker.title}</Text>
             </View>
           ))}
         </Animated.ScrollView>
@@ -202,6 +196,9 @@ const styles = StyleSheet.create({
     paddingRight: width - CARD_WIDTH,
   },
   card: {
+    flex: 1,
+    flexDirection: 'column',
+    alignItems: 'center',
     padding: 10,
     elevation: 2,
     backgroundColor: "#FFF",
@@ -216,16 +213,16 @@ const styles = StyleSheet.create({
   },
   cardImage: {
     flex: 3,
-    width: "100%",
-    height: "100%",
+    width: 50,
+    height: 50,
     alignSelf: "center",
   },
   textContent: {
     flex: 1,
   },
   cardtitle: {
+    flex: 1,
     fontSize: 12,
-    marginTop: 5,
     fontWeight: "bold",
   },
   cardDescription: {
@@ -235,6 +232,7 @@ const styles = StyleSheet.create({
   markerWrap: {
     alignItems: "center",
     justifyContent: "center",
+    padding: 20,
   },
   marker: {
     width: 8,
