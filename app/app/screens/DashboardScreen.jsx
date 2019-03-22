@@ -1,6 +1,6 @@
 //React dependencies
 import React, { Component } from 'react'
-import { View, Text, ImageBackground, ScrollView } from 'react-native'
+import { View, Text, ImageBackground, ScrollView, Image, ActivityIndicator } from 'react-native'
 //import { Svg, Defs, LinearGradient, Stop, Ellipse } from 'expo';
 
 //Components
@@ -14,23 +14,41 @@ import { grid, addButton, text, dashboard } from '../styles'
 
 export class DashBoardScreen extends Component{
   // trying to work with an api... semothing with setstate
-  /*constructor() {
-    fetch('http://quotes.rest/qod.json')
-      .then((response) => response.json())
-      .then((responseJson) => {
-        let quote = {
-          "text": responseJson.contents.quotes[0].quote,
-          "author": responseJson.contents.quotes[0].author,
-        }
-        console.log(quote)
-         
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }*/
+    constructor(props){
+      super(props);
+      this.state ={ isLoading: true}
+    }
+  
+    componentDidMount(){
+      const randIndex =  Math.floor(Math.random() * 5) + 0
+
+      return fetch('https://www.codeddesign.be/api.json#')
+        .then((response) => response.json())
+        .then((responseJson) => {
+  
+          this.setState({
+            isLoading: false,
+            tipText: responseJson.results[randIndex].content,
+            tipImage: responseJson.results[randIndex].url
+          }, function(){
+  
+          })
+  
+        })
+        .catch((error) =>{
+          console.error(error);
+        });
+    }
 
   render() {
+    if(this.state.isLoading){
+      return(
+        <View style={{flex: 1, paddingTop: 200}}>
+          <ActivityIndicator/>
+        </View>
+      )
+    }
+
     return (
       // <Svg
       //   height="150"
@@ -51,7 +69,10 @@ export class DashBoardScreen extends Component{
 
           <DashboardCard>
             <Text style={text.cardTitle}> Tip of the day </Text>
-            <Text style={text.cardText}> Go swimming! There's a swimming pool 3km away. </Text>
+            <Text style={text.cardText}> {this.state.tipText} </Text>
+            <View style={dashboard.imageContainer}>
+              <Image style={dashboard.image} source={{uri: this.state.tipImage}}></Image>
+            </View>
           </DashboardCard>
 
           <DashboardCard>

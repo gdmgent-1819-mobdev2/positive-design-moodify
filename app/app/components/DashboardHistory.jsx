@@ -37,7 +37,7 @@ export class DashboardHistory extends Component {
   }
 
   render(){
-    console.log(this.state.letterStyles)
+    //console.log(this.state.letterStyles)
     return(
         <View style={{flexDirection: "row"}}>
           <Text style={this.state.letterStyles[1]}> M </Text>
