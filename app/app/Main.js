@@ -9,6 +9,7 @@ import { DashBoardScreen } from './screens/DashboardScreen'
 import { MoodScreen } from './screens/MoodScreen'
 import { MapScreen } from './screens/MapScreen'
 import { ProfileScreen } from './screens/ProfileScreen'
+import { LoginScreen } from './screens/LoginScreen'
 
 /**
 * TODO:
@@ -46,7 +47,7 @@ const AppNavigator = createBottomTabNavigator({
   Mood: { screen: MoodScreen },
   Empty: { screen: MoodScreen },
   Map: { screen: MapScreen },
-  Profile: {screen: ProfileScreen},
+  Profile: {screen: LoginScreen},
 },
 {
   defaultNavigationOptions: ({ navigation }) => ({
