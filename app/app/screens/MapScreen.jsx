@@ -1,17 +1,20 @@
 //React dependencies
 import React, { Component } from 'react'
-import { StyleSheet, Text, View, Animated, Image, Dimensions } from "react-native"
+import { StyleSheet, Text, View, Animated, Image, Dimensions , TouchableOpacity, ScrollView } from "react-native"
+
+import SlidingUpPanel from 'rn-sliding-up-panel';
 
 import { MapView } from 'expo'
 
 
-
+// calculate card height/width on bottom of screen
 const { width, height } = Dimensions.get("window");
 
 const CARD_HEIGHT = height / 4;
 const CARD_WIDTH = width - 20;
 
 export class MapScreen extends Component {
+  // get the information for on the map
   state = {
     markers: [
       {
@@ -114,7 +117,12 @@ export class MapScreen extends Component {
     });
 
     return (
+    
+           // render the map
+
       <View style={styles.container}>
+      
+
         <MapView
           ref={map => this.map = map}
           initialRegion={this.state.region}
@@ -131,7 +139,9 @@ export class MapScreen extends Component {
             const opacityStyle = {
               opacity: interpolations[index].opacity,
             };
-            return (
+            return (  
+              // return the values inside the map 
+              // create map pointers        
               <MapView.Marker key={index} coordinate={marker.coordinate}>
                 <Animated.View style={[styles.markerWrap, opacityStyle]}>
                   <Animated.View style={[styles.ring, scaleStyle]} />
@@ -145,6 +155,7 @@ export class MapScreen extends Component {
             );
           })}
         </MapView>
+        
         <Animated.ScrollView
           horizontal
           scrollEventThrottle={1}
@@ -167,23 +178,62 @@ export class MapScreen extends Component {
         >
           {this.state.markers.map((marker, index) => (
             <View style={styles.card} key={index}>
+            
+
               <Image
                 source={marker.image}
                 style={styles.cardImage}
                 resizeMode="contain"
               />
               <Text numberOfLines={1} style={styles.cardtitle}>{marker.title}</Text>
+              <TouchableOpacity onPress={() => this._panel.show()} >
+
+                <View>
+                  <Text>Show</Text>
+                </View>
+              </TouchableOpacity>
             </View>
           ))}
         </Animated.ScrollView>
+
+
+        <View style={styles.dragBack}>
+            
+              <SlidingUpPanel ref={c => (this._panel = c)} height={200} minimumDistanceThreshold={30}>
+                {dragHandler => (
+                  <View style={styles.dragBack}>
+                    <View style={styles.dragHandler} {...dragHandler}>
+                      <Text>Drag handler</Text>
+                    </View>
+                    <ScrollView>
+                      <Text>Here is the content inside panel</Text>
+                      <Text>Here is the content inside panel</Text>
+                      <Text>Here is the content inside panel</Text>
+                      <Text>Here is the content inside panel</Text>
+                      <Text>Here is the content inside panel</Text>
+                      <Text>Here is the content inside panel</Text>
+                      <Text>Here is the content inside panel</Text>
+                      <Text>Here is the content inside panel</Text>
+                      <Text>Here is the content inside panel</Text>
+                      <Text>Here is the content inside panel</Text>
+                      <Text>Here is the content inside panel</Text>
+                      <Text>Here is the content inside panel</Text>
+                      <Text>Here is the content inside panel</Text>
+                      <Text>Here is the content inside panel</Text>
+                    </ScrollView>
+                  </View>
+                )}
+              </SlidingUpPanel>
+            </View>
       </View>
+      
     );
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 6,   
   },
   scrollView: {
     position: "absolute",
@@ -192,6 +242,25 @@ const styles = StyleSheet.create({
     right: 0,
     paddingVertical: 10,
   },
+  // start slideup css
+  dragBack: {
+    flex:1,
+    zIndex: 1,
+    backgroundColor: 'transparent',
+    alignItems: 'center',
+
+    justifyContent: 'center'
+  },  
+  dragHandler: {
+    flex:6,
+    alignSelf: 'stretch',
+    zIndex: 2,
+    height: 70,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#ccc'
+  },
+  // end slideup css
   endPadding: {
     paddingRight: width - CARD_WIDTH,
   },

@@ -32,7 +32,7 @@ export class MoodScreen extends Component{
         <Text style={text.header}>How are you feeling?</Text>
           <View style={grid.smiley}>
             
-              <TouchableHighlight underlayColor='none'
+              <TouchableHighlight underlayColor='transparent'
                 onPress={() => {}}
                 style={[this.state.pressStatus ? smiley.containerButton : smiley.container]}
                 onHideUnderlay={this._onHideUnderlay.bind(this)}
@@ -46,7 +46,7 @@ export class MoodScreen extends Component{
               </TouchableHighlight  >
 
             
-            <TouchableHighlight underlayColor='none'
+            <TouchableHighlight underlayColor='transparent'
               onPress={() => {}}
               style={[this.state.pressStatus ? smiley.containerButton : smiley.container]}
               onHideUnderlay={this._onHideUnderlay.bind(this)}
@@ -58,7 +58,7 @@ export class MoodScreen extends Component{
             source={require('../assets/images/smileys/033-angry-4.png')} />
             </TouchableHighlight  >
               
-            <TouchableHighlight underlayColor='none'
+            <TouchableHighlight underlayColor='transparent'
               onPress={() => {}}
               style={[this.state.pressStatus ? smiley.containerButton : smiley.container]}
               onHideUnderlay={this._onHideUnderlay.bind(this)}
@@ -70,7 +70,7 @@ export class MoodScreen extends Component{
               source={require('../assets/images/smileys/045-shocked-3.png')}/>
             </TouchableHighlight  >
 
-            <TouchableHighlight underlayColor='none'
+            <TouchableHighlight underlayColor='transparent'
               onPress={() => {}}
               style={[this.state.pressStatus ? smiley.containerButton : smiley.container]}
               onHideUnderlay={this._onHideUnderlay.bind(this)}
@@ -82,7 +82,7 @@ export class MoodScreen extends Component{
             source={require('../assets/images/smileys/063-sad-2.png')} />
             </TouchableHighlight  >
 
-            <TouchableHighlight underlayColor='none'
+            <TouchableHighlight underlayColor='transparent'
               onPress={() => {}}
               style={[this.state.pressStatus ? smiley.containerButton : smiley.container]}
               onHideUnderlay={this._onHideUnderlay.bind(this)}
@@ -94,7 +94,7 @@ export class MoodScreen extends Component{
             source={require('../assets/images/smileys/088-thinking.png')} />
             </TouchableHighlight  >
             
-            <TouchableHighlight underlayColor='none'
+            <TouchableHighlight underlayColor='transparent'
               onPress={() => {}}
               style={[this.state.pressStatus ? smiley.containerButton : smiley.container]}
               onHideUnderlay={this._onHideUnderlay.bind(this)}
