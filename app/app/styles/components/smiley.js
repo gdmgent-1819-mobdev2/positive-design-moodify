@@ -6,6 +6,11 @@ const smiley = StyleSheet.create({
     width: 50,
     height: 50,
     margin: 4,
+  },
+  history: {
+    width: 35,
+    height: 35,
+    margin: 8,
   }
 })
 

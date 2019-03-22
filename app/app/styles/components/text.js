@@ -23,7 +23,7 @@ const text = StyleSheet.create({
     alignSelf: 'flex-start',
     color: '#4F4F4F',
     fontFamily: 'europa-bold',
-    marginBottom: 18,
+    marginBottom: 4,
   },
   cardText: {
     fontSize: vh(1.6),

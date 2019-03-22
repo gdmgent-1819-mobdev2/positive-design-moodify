@@ -10,10 +10,10 @@ import { DashboardHistory } from '../components'
 
 //Styles
 import { grid, addButton, text, dashboard } from '../styles'
+import { vh, vw } from 'react-native-expo-viewport-units';
 
 
 export class DashBoardScreen extends Component{
-  // trying to work with an api... semothing with setstate
     constructor(props){
       super(props);
       this.state ={ isLoading: true}
@@ -69,6 +69,7 @@ export class DashBoardScreen extends Component{
 
           <DashboardCard>
             <Text style={text.cardTitle}> Tip of the day </Text>
+            <View style={dashboard.titleDivider}/>
             <Text style={text.cardText}> {this.state.tipText} </Text>
             <View style={dashboard.imageContainer}>
               <Image style={dashboard.image} source={{uri: this.state.tipImage}}></Image>
@@ -77,6 +78,7 @@ export class DashBoardScreen extends Component{
 
           <DashboardCard>
             <Text style={text.cardTitle}> History </Text>
+            <View style={dashboard.titleDivider}/>
             <DashboardHistory/>
           </DashboardCard>
 

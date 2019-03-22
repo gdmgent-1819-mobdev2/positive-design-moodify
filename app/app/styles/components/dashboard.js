@@ -16,6 +16,13 @@ const dashboard = StyleSheet.create({
     shadowRadius: 3,
     elevation: 1,
   },
+  titleDivider: {
+    borderColor: 'lightgray', 
+    borderBottomWidth: 1, 
+    width: vw(90), 
+    alignSelf: "center", 
+    marginBottom: 14,
+  },
   cardContainer: {
     paddingBottom: 40,
     backgroundColor: 'transparent',
