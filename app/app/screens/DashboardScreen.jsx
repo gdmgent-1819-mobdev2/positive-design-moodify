@@ -20,12 +20,10 @@ export class DashBoardScreen extends Component{
     }
   
     componentDidMount(){
-      const randIndex =  Math.floor(Math.random() * 5) + 0
-
       return fetch('https://www.codeddesign.be/api.json#')
         .then((response) => response.json())
         .then((responseJson) => {
-  
+          const randIndex =  Math.floor(Math.random() * responseJson.results.length) + 0
           this.setState({
             isLoading: false,
             tipText: responseJson.results[randIndex].content,
