@@ -6,6 +6,8 @@ import smiley from './components/smiley'
 import text from './components/text'
 import dashboard from './components/dashboard'
 import profile from './components/profile'
+import input from './components/input'
+import button from './components/button'
 
 export {
   grid,
@@ -16,4 +18,6 @@ export {
   text,
   dashboard,
   profile,
+  input,
+  button,
 }

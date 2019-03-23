@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native'
+import { vw, vh } from 'react-native-expo-viewport-units';
 
 const grid = StyleSheet.create({
   containerInitial: {
@@ -10,10 +11,12 @@ const grid = StyleSheet.create({
   },
   container: {
     paddingTop: 50,
+    paddingLeft: 20,
+    paddingRight: 20,
     flex: 1,
     backgroundColor: '#F5F5F5',
     flexDirection: 'column',
-    alignItems: 'center'
+    alignItems: 'flex-start'
   },
   containerMoodScreen: {
     flex: 1,
@@ -28,6 +31,19 @@ const grid = StyleSheet.create({
     backgroundColor: '#F5F5F5',
     flexDirection: 'column',
     alignItems: 'center'
+  },
+  containerAuthScreen: {
+    paddingTop: 50,
+    width: vw(100),
+    height: vh(100),
+    backgroundColor: '#F5F5F5',
+    flexDirection: 'column',
+    alignItems: 'center'
+  },
+  darkenOverlay: {
+    width: vw(100),
+    height: vh(110),
+    backgroundColor:'rgba(0,0,0,0.3)'
   },
   smiley: {
     flexDirection: 'row'

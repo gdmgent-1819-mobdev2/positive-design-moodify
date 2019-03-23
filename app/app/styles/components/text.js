@@ -14,6 +14,7 @@ const text = StyleSheet.create({
     alignSelf: 'flex-start',
     color: '#2B2B2B',
     fontFamily: 'europa-bold',
+    paddingBottom: 2,
     marginLeft: 20,
     marginBottom: 18,
     marginTop: 10,
@@ -56,6 +57,25 @@ const text = StyleSheet.create({
     color: '#FF4140',
     fontFamily: 'europa-regular',
     margin: 14,
+  },
+  inputLabel: {
+    fontSize: vh(3),
+    alignSelf: 'flex-start',
+    color: '#4F4F4F',
+    fontFamily: 'europa-bold',
+    marginBottom: 6,
+  },
+  inputText: {
+    fontSize: vh(2),
+    alignSelf: 'flex-start',
+    color: '#616161',
+    fontFamily: 'europa-regular',
+  },
+  button: {
+    fontSize: vh(3),
+    alignSelf: 'center',
+    color: '#616161',
+    fontFamily: 'europa-regular',
   },
 })
 
