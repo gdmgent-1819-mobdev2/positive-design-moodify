@@ -16,46 +16,46 @@ export class MapScreen extends Component {
     markers: [
       {
         coordinate: {
-          latitude: 45.524548,
-          longitude: -122.6749817,
+          latitude: 51.077006,
+          longitude: 3.709919,
         },
         title: "156171",
-        description: "This is the best place in Portland",
+        description: "This is the best place in Belgium",
         image: require('../assets/images/smileys/045-shocked-3.png'),
       },
       {
         coordinate: {
-          latitude: 45.524698,
-          longitude: -122.6655507,
+          latitude: 51.067625,
+          longitude: 3.750202,
         },
         title: "7157161",
-        description: "This is the second best place in Portland",
+        description: "This is the second best place in Belgium",
         image: require('../assets/images/smileys/003-angry-5.png'),
       },
       {
         coordinate: {
-          latitude: 45.5230786,
-          longitude: -122.6701034,
+          latitude: 51.077979,
+          longitude: 3.715936,
         },
         title: "98798",
-        description: "This is the third best place in Portland",
+        description: "This is the third best place in Belgium",
         image: require('../assets/images/smileys/010-nerd-10.png'),
       },
       {
         coordinate: {
-          latitude: 45.521016,
-          longitude: -122.6561917,
+          latitude: 51.054253,
+          longitude: 3.698059,
         },
         title: "87876",
-        description: "This is the fourth best place in Portland",
+        description: "This is the fourth best place in Belgium",
         image: require('../assets/images/smileys/015-sad-7.png'),
       },
     ],
     region: {
-      latitude: 45.52220671242907,
-      longitude: -122.6653281029795,
-      latitudeDelta: 0.04864195044303443,
-      longitudeDelta: 0.040142817690068,
+      latitude: 51.0535,
+      longitude: 3.7304,
+      latitudeDelta: 0.0922,
+      longitudeDelta: 0.0421,
     },
   };
 
