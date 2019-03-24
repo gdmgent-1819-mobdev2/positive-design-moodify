@@ -135,7 +135,7 @@ export class MapScreen extends Component {
               <MapView.Marker key={index} coordinate={marker.coordinate}>
                 <Animated.View style={[styles.markerWrap, opacityStyle]}>
                   <Animated.View style={[styles.ring, scaleStyle]} />
-                  <Image source={require('../assets/images/smileys/045-shocked-3.png')} style={{height: 50, width:50, padding: 10, }} />
+                  <Image source={marker.image} style={{height: 50, width:50, padding: 10, }} />
 
                   <View style={styles.marker} >
 
