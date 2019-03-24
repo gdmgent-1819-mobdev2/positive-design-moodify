@@ -50,7 +50,7 @@ const AppNavigator = createBottomTabNavigator({
   Mood: { screen: MoodScreen },
   Empty: { screen: MoodScreen },
   Map: { screen: MapScreen },
-  Profile: {screen: LoginScreen},
+  Profile: {screen: ProfileScreen},
 },
 {
   defaultNavigationOptions: ({ navigation }) => ({
