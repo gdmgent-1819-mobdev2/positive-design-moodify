@@ -2,9 +2,11 @@ import { StyleSheet } from 'react-native'
 const addButton = StyleSheet.create({
   bottom: {
     position: 'absolute',
+    alignSelf: 'center',
     bottom: -40,
   },
   button: {
+    zIndex: 1,
     alignItems:'center',
     justifyContent:'center',
     width:80,
