@@ -59,8 +59,8 @@ export class ProfileScreen extends Component{
 				</ScrollView>
 
 				<View style={addButton.bottom}>
-						<AddMoodButton />
-					</View>
+					<AddMoodButton />
+				</View>
 
 			</View>
     )

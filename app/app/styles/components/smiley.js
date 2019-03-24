@@ -13,5 +13,4 @@ const smiley = StyleSheet.create({
     margin: 8,
   }
 })
-
 export default smiley
