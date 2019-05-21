@@ -1,6 +1,6 @@
 //React dependencies
 import React, { Component } from 'react'
-import { createBottomTabNavigator, createAppContainer } from 'react-navigation'
+import { createBottomTabNavigator, createAppContainer, createSwitchNavigator, createStackNavigator } from 'react-navigation'
 import { Ionicons } from '@expo/vector-icons'
 
 //Screens
@@ -9,6 +9,7 @@ import { DashBoardScreen } from './screens/DashboardScreen'
 import { MoodScreen } from './screens/MoodScreen'
 import { MapScreen } from './screens/MapScreen'
 import { ProfileScreen } from './screens/ProfileScreen'
+import { LoginScreen } from './screens/LoginScreen'
 
 /**
 * TODO:
@@ -38,6 +39,9 @@ const getTabBarIcon = (navigation, focused, tintColor) => {
   return <IconComponent name={iconName} size={30} color={tintColor} />
 };
 
+//const AppStack = createStackNavigator({ Home: HomeScreen, Other: OtherScreen });
+const AuthStack = createStackNavigator({ Login: LoginScreen });
+
 /**
  * initiliaze bottomTabNavigator with working navigation
  */
@@ -63,6 +67,17 @@ const AppNavigator = createBottomTabNavigator({
 
 })
 
+const AuthContainer = createAppContainer(createSwitchNavigator(
+  {
+    //AuthLoading: AuthLoadingScreen,
+    //App: AppStack,
+    Auth: { screen: LoginScreen },
+  },
+  {
+    //initialRouteName: 'AuthLoading',
+  }
+))
+
 /**
  * create app navigation
  */
@@ -71,11 +86,12 @@ const AppContainer = createAppContainer(AppNavigator)
 export default class Main extends Component {
   state = {
     ready: false,
+    userLoggedIn: false
   }
   
   componentDidMount () {
     setTimeout(() => {
-      this.setState({ ready: true })
+      this.setState({ ready: true, userLoggedIn: true })
     }, 2000)
   }
 
@@ -85,9 +101,16 @@ export default class Main extends Component {
         <SplashScreen/>
       )
     } else {
+    if( this.state.userLoggedIn){
       return (
         <AppContainer />
       )
+    } else{
+      return (
+        <AuthContainer />
+      )
+
+    }
     }
   }
 }

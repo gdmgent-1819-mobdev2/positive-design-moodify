@@ -11,13 +11,15 @@ export class EuropaText extends Component {
 
   componentDidMount() {
     Font.loadAsync({
-      'europa-regular': require('../assets/fonts/Europa-Regular.otf')
+      'europa-regular': require('../assets/fonts/Europa-Regular.otf'),
+      'europa-bold': require('../assets/fonts/Europa-Bold.otf')
     })
   }
 
   async componentDidMount() {
     await Font.loadAsync({
-      'europa-regular': require('../assets/fonts/Europa-Regular.otf')
+      'europa-regular': require('../assets/fonts/Europa-Regular.otf'),
+      'europa-bold': require('../assets/fonts/Europa-Bold.otf')
     })
     this.setState({ fontLoaded: true })
   }
