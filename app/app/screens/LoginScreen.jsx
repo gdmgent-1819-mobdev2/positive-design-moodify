@@ -24,6 +24,9 @@ export class LoginScreen extends Component{
                 <Button>
                     Login
                 </Button>
+                <Button style={{backgroundColor: '#00000000'}} onPress={() => this.props.navigation.navigate('SignUpScreen')}>
+                    Sign up
+                </Button>
             </View>
        // </ImageBackground>
     );

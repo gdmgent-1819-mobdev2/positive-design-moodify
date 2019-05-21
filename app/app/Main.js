@@ -91,7 +91,7 @@ export default class Main extends Component {
   
   componentDidMount () {
     setTimeout(() => {
-      this.setState({ ready: true, userLoggedIn: true })
+      this.setState({ ready: true, userLoggedIn: false })
     }, 2000)
   }
 
