@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="tekst" />
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="icon" href="favicon.ico">
+
+    <script src="assets/libs/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+    <div class="bodywrapper">
+        <div class="navigationbox">
+            <div class="logobox">
+                <img src="images/logo.png">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#how">how</a></li>
+                    <li><a href="#screens">screens</a></li>
+                    <li><a href="#team">team</a></li>
+                </ul>
+            </nav>
+            </div>
+            <div class="contentbox about" class="clearfix" name="about" id="about">
+                <div class="contentwrapper">
+                <img src="images/background-1_Tekengebied%201_Tekengebied%201.png" alt="fototje" class="onab">
+                <h1 class="firsttitle title">How does it work &amp; What does it do?</h1>
+                <p class="content">Once your account is made (which happens quickly) you have to select your current mood. Then you get the option to go in a bit more of detail and select how well/bad you feel and why. Now next is our main feature of the app and that is that the app remembers your location when you select your mood. This way, when you revisit this location in the future, you can get a notification! e.g. "2 months ago you felt a bit down at this location". You can then choose to update your mood at this location to see if it has changed. <br><br>You also have the option to share your feelings rather than keep them private. And so you can also see how other people felt and why they felt a certain way, so you know you are never alone!</p>
+                    </div>
+            </div>
+        <div class="contentbox how" class="clearfix" name="how" id="how">
+                <div class="contentwrapper">
+                <img src="images/blubber_Tekengebied%201.png" alt="fototje" class="onab">
+                <h1 class="firsttitle title">How it's made</h1>
+                <p class="content">Our assignment was to create a mood app. From our competition analasys we realised there are three types of mood apps. Mood tracker, a Mood diaries and meditation apps. We knew that choosing one wouldn't cut it so we decided to combine a tracker with a diary.  after excessively thinking about features and asking random stranger for feedback we came up with this app. Now we have started development and that is what we are working on right now. </p>
+                    </div>
+            </div>
+        <div class="contentbox screens" class="clearfix" name="screens" id="screens">
+                <div class="contentwrapper">
+                
+                <h1 class="firsttitle title">Screens</h1>
+                <img src="images/screens.png" class="screensimage">
+                    </div>
+            </div>
+        <div class="contentbox team" class="clearfix" name="team" id="team">
+                <div class="contentwrapper">
+                <h1 class="firsttitle title nofloat">Meet the Team</h1>
+                <img src="images/kevn.jpg" class="kevin">
+                <img src="images/ruben.jpg" class="ruben">
+                <img src="images/jan.jpg" class="jan">
+                <img src="images/indy.jpg" class="indy">
+                    <div class="nametag kev">Kevin</div>
+                    <div class="nametag">Ruben</div>
+                    <div class="nametag">Jan</div>
+                    <div class="nametag">Indy</div>
+                    </div>
+            </div>
+
+
+
+    </div>
+
+    <script src="assets/libs/jquery-2.1.4.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>$(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 500);
+});</script>
+</body>
+
+</html>
